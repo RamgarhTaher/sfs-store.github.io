@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 router.get('/getUsers', async (req, res) => {
     try {
-        const users = await ShopUsers.find({});
+        const users = await ShopUsers.find();
         res.send(users);
     } catch (error) {
         console.log(error);
@@ -26,7 +26,7 @@ router.post('/addUsers', async (req, res) => {
         const data = req.body;
         const userData = ShopUsers(data);
         await userData.save();
-        const users = await ShopUsers.find({});
+        const users = await ShopUsers.find();
         res.send(users);
     } catch (error) {
         console.log(error);
