@@ -6,6 +6,11 @@ const { ShopUsers } = require('./user_schema');
 const router = express.Router();
 
 // creating an API for items...
+
+router.get('/', (req, res) => {
+    res.send('hi where are you...')
+});
+
 router.get('/getUsers', async (req, res) => {
     try {
         const users = await ShopUsers.find({});
