@@ -8,7 +8,7 @@ const router = express.Router();
 // creating an API for items...
 
 router.get('/', (req, res) => {
-    res.send('hi where are you...')
+    res.render('index')
 });
 
 router.get('/getUsers', async (req, res) => {
