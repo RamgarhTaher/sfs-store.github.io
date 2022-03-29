@@ -39,12 +39,12 @@ newUserSchema.pre("save", async function (next) {
     next();
 });
 
-newUserSchema.methods.generateToken = async function () {
-    const token = jwt.sign({ _id: this._id }, process.env.SECRET_KEY);
-    this.tokens = await this.tokens.concat({ token: token });
-    await this.save();
-    return token;
-}
+// newUserSchema.methods.generateToken = async function () {
+//     const token = jwt.sign({ _id: this._id }, process.env.SECRET_KEY);
+//     this.tokens = await this.tokens.concat({ token: token });
+//     await this.save();
+//     return token;
+// }
 
 newUserSchema.methods.addToCart = async function (data) {
     // this.carts = await this.carts.concat({cart: data});
