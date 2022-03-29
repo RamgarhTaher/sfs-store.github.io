@@ -8,7 +8,7 @@ const router = express.Router();
 // creating an API for items...
 
 router.get('/', (req, res) => {
-    res.render('index')
+    res.send('Welcome to heroku...')
 });
 
 router.get('/getUsers', async (req, res) => {
