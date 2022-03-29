@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
-const DB = `mongodb + srv://anyoneaccess:anyoneaccess@cluster0.hgrha.mongodb.net/sfsStoreDatabase?retryWrites=true&w=majority
-`;
+// const DB = `mongodb + srv://anyoneaccess:anyoneaccess@cluster0.hgrha.mongodb.net/sfsStoreDatabase?retryWrites=true&w=majority
+// `;
+
+const DB = const uri = process.env.MONGODB_URI;;
 
 mongoose.connect(DB).then(() => {
     console.log('The server is sucsessfuly connected !');
